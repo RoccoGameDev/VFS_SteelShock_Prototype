@@ -321,6 +321,9 @@ MonoBehaviour:
   <Rigidbody>k__BackingField: {fileID: 5125051828923805465}
   <NavMeshAgent>k__BackingField: {fileID: 5125051828923805466}
   <CapsuleCollider>k__BackingField: {fileID: 5125051828923805464}
+  _controllerDeadzone: 0.1
+  _gamepadRotateSmoothing: 1000
+  _isGamepad: 0
 --- !u!114 &5081346806896258639
 MonoBehaviour:
   m_ObjectHideFlags: 0

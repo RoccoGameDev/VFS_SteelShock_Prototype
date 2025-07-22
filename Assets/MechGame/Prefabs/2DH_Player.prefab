@@ -441,6 +441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1729171460512817623, guid: 967b0609d4defd9479cc900831c5e540,
         type: 3}
+      propertyPath: <ControlRotation>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729171460512817623, guid: 967b0609d4defd9479cc900831c5e540,
+        type: 3}
       propertyPath: <Fix3DSpriteRotation>k__BackingField
       value: 0
       objectReference: {fileID: 0}
