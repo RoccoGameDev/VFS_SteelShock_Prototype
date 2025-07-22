@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: fe8a4e26960f4b44f89e12262a132246, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -358,7 +358,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: fe8a4e26960f4b44f89e12262a132246, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -444,6 +444,11 @@ PrefabInstance:
       propertyPath: <Fix3DSpriteRotation>k__BackingField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1729171460512817623, guid: 967b0609d4defd9479cc900831c5e540,
+        type: 3}
+      propertyPath: <LookInMoveDirection>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2287974301181524266, guid: 967b0609d4defd9479cc900831c5e540,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -453,6 +458,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -28.925442
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081346806896258639, guid: 967b0609d4defd9479cc900831c5e540,
+        type: 3}
+      propertyPath: <CursorMode>k__BackingField
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5125051828923805461, guid: 967b0609d4defd9479cc900831c5e540,
         type: 3}
@@ -523,6 +533,11 @@ PrefabInstance:
         type: 3}
       propertyPath: CameraDistance
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817494751409996362, guid: 967b0609d4defd9479cc900831c5e540,
+        type: 3}
+      propertyPath: Lookahead.Smoothing
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
