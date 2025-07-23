@@ -304,7 +304,6 @@ GameObject:
   - component: {fileID: 2533795555729997945}
   - component: {fileID: 4624872538518898845}
   - component: {fileID: 1759213427807151094}
-  - component: {fileID: 1070242250246440641}
   m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
@@ -380,27 +379,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1070242250246440641
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9102843174743190139}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1940308632977388982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -409,6 +387,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 24491402959157276, guid: 967b0609d4defd9479cc900831c5e540,
+        type: 3}
+      propertyPath: <CharacterMovement>k__BackingField
+      value: 
+      objectReference: {fileID: 8361347025790875429}
     - target: {fileID: 1729171460512817623, guid: 967b0609d4defd9479cc900831c5e540,
         type: 3}
       propertyPath: <Speed>k__BackingField
@@ -544,18 +527,124 @@ PrefabInstance:
       propertyPath: Lookahead.Smoothing
       value: 0.3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1729171460512817623, guid: 967b0609d4defd9479cc900831c5e540, type: 3}
+    - {fileID: 5081346806896258639, guid: 967b0609d4defd9479cc900831c5e540, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5125051828923805460, guid: 967b0609d4defd9479cc900831c5e540,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6862189875018339427}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5125051828923805462, guid: 967b0609d4defd9479cc900831c5e540,
+        type: 3}
+      insertIndex: 8
+      addedObject: {fileID: 4941785387423116398}
+    - targetCorrespondingSourceObject: {fileID: 5125051828923805462, guid: 967b0609d4defd9479cc900831c5e540,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8361347025790875429}
   m_SourcePrefab: {fileID: 100100000, guid: 967b0609d4defd9479cc900831c5e540, type: 3}
+--- !u!1 &6769626124839656096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5125051828923805462, guid: 967b0609d4defd9479cc900831c5e540,
+    type: 3}
+  m_PrefabInstance: {fileID: 1940308632977388982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4941785387423116398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769626124839656096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d3bcef86bc51f744a3e60ade6d56e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <CursorMode>k__BackingField: 2
+  <LookInCameraDirection>k__BackingField: 0
+  <Movement>k__BackingField: {fileID: 8361347025790875429}
+--- !u!114 &8361347025790875429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769626124839656096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c86861b32db2274ca2a510c6099c31e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Speed>k__BackingField: 12
+  <Acceleration>k__BackingField: 1
+  <TurnSpeed>k__BackingField: 15
+  <StoppingDistance>k__BackingField: 0.25
+  <LookInMoveDirection>k__BackingField: 0
+  <ControlRotation>k__BackingField: 1
+  <Fix3DSpriteRotation>k__BackingField: 0
+  <ParentToSurface>k__BackingField: 0
+  <Gravity>k__BackingField: -20
+  <JumpHeight>k__BackingField: 2.25
+  <AirControl>k__BackingField: 0.1
+  <AirTurning>k__BackingField: 1
+  <Height>k__BackingField: 1.8
+  <Radius>k__BackingField: 0.3
+  <GroundCheckOffset>k__BackingField: 0.1
+  <GroundCheckDistance>k__BackingField: 0.4
+  <MaxSlopeAngle>k__BackingField: 40
+  <CoyoteMaxJumpDistance>k__BackingField: 0.5
+  <GroundMask>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 1
+  <MinGroundedVelocity>k__BackingField: 5
+  OnGrounded:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFootstep:
+    m_PersistentCalls:
+      m_Calls: []
+  <StepHeight>k__BackingField: 0.3
+  <StepHeightAllowance>k__BackingField: 0.1
+  <StepHeightForwardOffset>k__BackingField: 0.05
+  <EnableAvoidance>k__BackingField: 0
+  <SpeedVariation>k__BackingField: 0.5
+  <NeighborDistance>k__BackingField: 3
+  <CornerNeighborDistance>k__BackingField: 1
+  <NeighborMask>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 0
+  <MaxNeighbors>k__BackingField: 8
+  <IsClampedToNavMesh>k__BackingField: 1
+  <ClampLookAheadTime>k__BackingField: 0.25
+  <ClampSearchRadius>k__BackingField: 1
+  <Rigidbody>k__BackingField: {fileID: 6769626124839656111}
+  <NavMeshAgent>k__BackingField: {fileID: 6769626124839656108}
+  <CapsuleCollider>k__BackingField: {fileID: 6769626124839656110}
 --- !u!4 &6769626124839656098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5125051828923805460, guid: 967b0609d4defd9479cc900831c5e540,
+    type: 3}
+  m_PrefabInstance: {fileID: 1940308632977388982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &6769626124839656108 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 5125051828923805466, guid: 967b0609d4defd9479cc900831c5e540,
+    type: 3}
+  m_PrefabInstance: {fileID: 1940308632977388982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &6769626124839656110 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 5125051828923805464, guid: 967b0609d4defd9479cc900831c5e540,
+    type: 3}
+  m_PrefabInstance: {fileID: 1940308632977388982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &6769626124839656111 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 5125051828923805465, guid: 967b0609d4defd9479cc900831c5e540,
     type: 3}
   m_PrefabInstance: {fileID: 1940308632977388982}
   m_PrefabAsset: {fileID: 0}
